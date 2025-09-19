@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Stay Residency - Customers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand">
+    <div class="brand-title">Spring Stay Residency</div>
+    <div class="brand-subtitle">Welcome to Spring Stay Residency</div>
+  </div>
+  <div class="links">
+    <a href="/">Dashboard</a>
+    <a href="/rooms">Rooms</a>
+    <a href="/customers" class="active">Customers</a>
+    <a href="/bookings">Bookings</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Customers</h1>
+  <section class="card">
+    <h2>Add Customer</h2>
+    <form id="customerForm" class="form-grid">
+      <label>Name
+        <input type="text" id="name" required />
+      </label>
+      <label>Email
+        <input type="email" id="email" required />
+      </label>
+      <label>Phone
+        <input type="text" id="phone" required />
+      </label>
+      <button type="submit" class="btn">Add Customer</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>All Customers</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody id="customersBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="/js/customers.js"></script>
+</body>
+</html>

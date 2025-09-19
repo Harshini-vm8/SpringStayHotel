@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Stay Residency - Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand">
+    <div class="brand-title">Spring Stay Residency</div>
+    <div class="brand-subtitle">Welcome to Spring Stay Residency</div>
+  </div>
+  <div class="links">
+    <a href="/">Dashboard</a>
+    <a href="/rooms">Rooms</a>
+    <a href="/customers">Customers</a>
+    <a href="/bookings">Bookings</a>
+  </div>
+</nav>
+
+<main class="container">
+  <section class="hero">
+    <h1 class="hero-title">Spring Stay Residency</h1>
+    <p class="hero-subtitle">Welcome to Spring Stay Residency</p>
+  </section>
+  <h2>Dashboard</h2>
+  <section class="cards">
+    <div class="card">
+      <div class="card-title">Total Rooms</div>
+      <div id="totalRooms" class="card-value">0</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Available Rooms</div>
+      <div id="availableRooms" class="card-value">0</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Occupied Rooms</div>
+      <div id="occupiedRooms" class="card-value">0</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Total Bookings</div>
+      <div id="totalBookings" class="card-value">0</div>
+    </div>
+  </section>
+
+  <section class="table-section">
+    <h2>Recent Bookings</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Booking #</th>
+        <th>Customer</th>
+        <th>Room</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+      </tr>
+      </thead>
+      <tbody id="recentBookingsBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

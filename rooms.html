@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Stay Residency - Rooms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand">
+    <div class="brand-title">Spring Stay Residency</div>
+    <div class="brand-subtitle">Welcome to Spring Stay Residency</div>
+  </div>
+  <div class="links">
+    <a href="/">Dashboard</a>
+    <a href="/rooms" class="active">Rooms</a>
+    <a href="/customers">Customers</a>
+    <a href="/bookings">Bookings</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Rooms</h1>
+  <section class="card">
+    <h2>Add Room</h2>
+    <form id="roomForm" class="form-grid">
+      <label>Room Type
+        <select id="roomType"></select>
+      </label>
+      <label>Price
+        <input type="number" id="price" step="0.01" min="0" required />
+      </label>
+      <label>Status
+        <select id="status">
+          <option value="AVAILABLE">Available</option>
+          <option value="OCCUPIED">Occupied</option>
+        </select>
+      </label>
+      <button type="submit" class="btn">Add Room</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>All Rooms</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody id="roomsBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="/js/rooms.js"></script>
+</body>
+</html>

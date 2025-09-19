@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spring Stay Residency - Bookings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand">
+    <div class="brand-title">Spring Stay Residency</div>
+    <div class="brand-subtitle">Welcome to Spring Stay Residency</div>
+  </div>
+  <div class="links">
+    <a href="/">Dashboard</a>
+    <a href="/rooms">Rooms</a>
+    <a href="/customers">Customers</a>
+    <a href="/bookings" class="active">Bookings</a>
+  </div>
+</nav>
+<main class="container">
+  <h1>Bookings</h1>
+  <section class="card">
+    <h2>Create Booking</h2>
+    <form id="bookingForm" class="form-grid">
+      <label>Customer
+        <select id="customerSelect"></select>
+      </label>
+      <label>Room
+        <select id="roomSelect"></select>
+      </label>
+      <label>Check-In Date
+        <input type="date" id="checkInDate" required />
+      </label>
+      <label>Check-Out Date
+        <input type="date" id="checkOutDate" required />
+      </label>
+      <button type="submit" class="btn">Create Booking</button>
+    </form>
+  </section>
+
+  <section class="table-section">
+    <h2>All Bookings</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Customer</th>
+        <th>Room</th>
+        <th>Check-In</th>
+        <th>Check-Out</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody id="bookingsBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="/js/bookings.js"></script>
+</body>
+</html>
